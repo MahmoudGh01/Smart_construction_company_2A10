@@ -40,7 +40,7 @@ void MainWindow::on_pb_ajouter_clicked()
 
 void MainWindow::on_pb_supprimer_clicked()
 {
-    Batiments B1; B1.setid(ui->lineEdit_ID_supp->text());
+    Batiments B1; B1.setid(ui->lineEdit_ID->text());
     bool test=B1.supprimer(B1.get_id());
     if (test)
     { QMessageBox::information(nullptr, QObject::tr("OK"),
@@ -53,4 +53,34 @@ void MainWindow::on_pb_supprimer_clicked()
                 QMessageBox::critical(nullptr, QObject::tr("Not OK"),
                             QObject::tr("Suppression échoué.\n"
                                         "Click Cancel to exit."), QMessageBox::Cancel);
+}
+
+void MainWindow::on_pb_modifier_clicked()
+{
+
+    QString id= ui->lineEdit_ID->text();
+    QString responsable= ui->lineEdit_responsable->text();
+    QString type= ui->lineEdit_type->text();
+    QString adresse= ui->lineEdit_Adresse->text();
+    /*QDate date_contrat = ui->dateEdit_Contrat->date();
+    int id = ui->lineEdit_idsuppmodifContrat->text().toInt();*/
+
+    Batiments B(id,responsable,type,adresse);
+
+
+bool ok = B.modifier();
+if(ok)
+{
+
+    QMessageBox::information(nullptr, QObject::tr("succes"),
+                QObject::tr(" modifié.\n"
+                            "Click Cancel to exit."), QMessageBox::Cancel);
+    ui->tab_batiment->setModel(b.afficher());
+
+
+}
+else
+    QMessageBox::critical(nullptr, QObject::tr("fail"),
+                QObject::tr(" non modifié.\n"
+                            "Click Cancel to exit."), QMessageBox::Cancel);
 }

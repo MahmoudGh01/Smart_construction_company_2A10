@@ -16,7 +16,7 @@ public:
     void setadresse (QString adresse);
     bool ajouter();
     bool supprimer(QString);
-
+    bool modifier();
     QSqlQueryModel* afficher();
 
     QString get_id();

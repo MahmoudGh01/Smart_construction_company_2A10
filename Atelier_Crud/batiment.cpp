@@ -55,3 +55,13 @@ bool Batiments::supprimer(QString id)
           query.bindValue(":adresse", adresse);
           return query.exec();
 }
+bool Batiments::modifier()
+{   QSqlQuery query;
+    query.prepare( "UPDATE BATIMENT SET ID=:id,RESPONSABLE=:responsable,TYPE=:type,ADRESSE=:adresse WHERE ID=:id");
+    query.bindValue(":id", id);
+    query.bindValue(":responsable", responsable);
+    query.bindValue(":type", type);
+    query.bindValue(":adresse", adresse);
+
+    return query.exec();
+}
