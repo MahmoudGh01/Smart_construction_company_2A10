@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 ui->tab_batiment->setModel(b.afficher());
 
+
 }
 
 MainWindow::~MainWindow()
@@ -21,9 +22,10 @@ void MainWindow::on_pb_ajouter_clicked()
 {
     QString id= ui->lineEdit_ID->text();
     QString responsable= ui->lineEdit_responsable->text();
-    QString type= ui->lineEdit_type->text();
+    QString type= ui->lineEdit_type->currentText();
     QString adresse= ui->lineEdit_Adresse->text();
-    Batiments b(id,responsable,type,adresse) ;
+    QString budget= ui->spinBox_budget->text();
+    Batiments b(id,responsable,type,adresse,budget) ;
     bool test=b.ajouter();
     if (test)
     { QMessageBox::information(nullptr, QObject::tr("OK"),
@@ -60,12 +62,13 @@ void MainWindow::on_pb_modifier_clicked()
 
     QString id= ui->lineEdit_ID->text();
     QString responsable= ui->lineEdit_responsable->text();
-    QString type= ui->lineEdit_type->text();
+    QString type= ui->lineEdit_type->currentText();
     QString adresse= ui->lineEdit_Adresse->text();
-    /*QDate date_contrat = ui->dateEdit_Contrat->date();
-    int id = ui->lineEdit_idsuppmodifContrat->text().toInt();*/
+     QString budget= ui->spinBox_budget->text();
 
-    Batiments B(id,responsable,type,adresse);
+
+
+    Batiments B(id,responsable,type,adresse,budget);
 
 
 bool ok = B.modifier();
@@ -84,3 +87,7 @@ else
                 QObject::tr(" non modifié.\n"
                             "Click Cancel to exit."), QMessageBox::Cancel);
 }
+
+
+
+

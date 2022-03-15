@@ -9,11 +9,14 @@ class Batiments
 {
 public:
     Batiments();
-    Batiments(QString,QString,QString,QString);
+    Batiments(QString,QString,QString,QString,QString);
+
     void setid(QString id);
     void setresponsable(QString responsable);
     void settype (QString type);
     void setadresse (QString adresse);
+
+    void setbudget(QString budget);
     bool ajouter();
     bool supprimer(QString);
     bool modifier();
@@ -24,10 +27,13 @@ public:
     QString get_type ();
     QString get_adresse();
 
+    QString get_budget();
+
+
 
 
 private:
-    QString type,responsable,adresse,id;
+    QString type,responsable,adresse,id,budget;
 
 };
 
