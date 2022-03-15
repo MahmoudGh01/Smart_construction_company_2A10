@@ -704,28 +704,41 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <rect>
         <x>40</x>
         <y>370</y>
-        <width>671</width>
+        <width>851</width>
         <height>221</height>
        </rect>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="QGroupBox" name="groupBox_4">
       <property name="geometry">
        <rect>
         <x>590</x>
-        <y>230</y>
+        <y>30</y>
         <width>311</width>
-        <height>121</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="title">
-       <string>Trier par :</string>
+       <string>Rechercher</string>
       </property>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Rechercher</string>
+       </property>
+      </widget>
       <widget class="QComboBox" name="comboBox">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>30</y>
+         <y>100</y>
          <width>231</width>
          <height>41</height>
         </rect>
@@ -757,88 +770,13 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </item>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>30</y>
-        <width>311</width>
-        <height>191</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Rechercher</string>
-      </property>
-      <widget class="QRadioButton" name="radioButton_7">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>50</y>
-         <width>87</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Identifiant</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_8">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>80</y>
-         <width>141</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Responsable</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_9">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>110</y>
-         <width>87</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Type</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_10">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>140</y>
-         <width>87</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Adresse</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>221</width>
-         <height>21</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
      <widget class="QGroupBox" name="groupBox_6">
       <property name="geometry">
        <rect>
-        <x>750</x>
-        <y>370</y>
-        <width>151</width>
-        <height>211</height>
+        <x>590</x>
+        <y>270</y>
+        <width>301</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="title">
@@ -848,7 +786,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>40</y>
+         <y>30</y>
          <width>93</width>
          <height>28</height>
         </rect>
@@ -857,24 +795,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <string>EXCEL</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>100</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>PDF</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pushButton_3">
        <property name="geometry">
         <rect>
-         <x>30</x>
-         <y>150</y>
+         <x>170</x>
+         <y>30</y>
          <width>93</width>
          <height>28</height>
         </rect>
@@ -884,11 +809,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </property>
       </widget>
      </widget>
-     <zorder>groupBox_3</zorder>
-     <zorder>groupBox</zorder>
-     <zorder>tab_batiment</zorder>
-     <zorder>groupBox_4</zorder>
-     <zorder>groupBox_6</zorder>
     </widget>
    </widget>
   </widget>
