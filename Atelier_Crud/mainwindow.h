@@ -25,7 +25,8 @@ public:
     ~MainWindow();
     QSortFilterProxyModel *proxy;
     void show_table();
-
+    void fill_form(QString selected );
+    void clear_form( );
 
 private slots:
     void on_pb_ajouter_clicked();
@@ -44,10 +45,17 @@ private slots:
 
     void on_comboBox_currentIndexChanged(const QString &arg1);
 
+    void on_tab_batiment_clicked(const QModelIndex &index);
+
+    void on_tab_batiment_doubleClicked(const QModelIndex &index);
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     Batiments b;
     int sel_col=-1;
+    QString selected="";
 };
 
 #endif // MAINWINDOW_H

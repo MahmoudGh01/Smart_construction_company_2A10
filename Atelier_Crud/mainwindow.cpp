@@ -12,6 +12,7 @@
 #include <QPrintDialog>
 #include<QPrintDialog>
 #include <QDate>
+#include <QSqlQuery>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -41,6 +42,33 @@ void MainWindow::show_table(){
     ui->tab_batiment->setModel(proxy);
 
 }
+void MainWindow::fill_form(QString selected ) {
+    QSqlQuery query;
+    query.prepare("select * from BATIMENT where ID= :ID");
+    query.bindValue(":ID", selected);
+    query.exec();
+    while(query.next()){
+
+  ui->lineEdit_ID->setText(query.value(0).toString()); //line edit
+  ui->lineEdit_responsable->setText(query.value(1).toString());
+  ui->lineEdit_Adresse->setText(query.value(3).toString());
+  ui->spinBox_budget->setValue(query.value(4).toInt());
+   ui->lineEdit_type->setCurrentText(query.value(2).toString()); //combobox
+
+
+    }
+
+}
+void MainWindow::clear_form( ) {
+
+    ui->lineEdit_ID->clear();
+     ui->lineEdit_responsable->clear();
+    ui->lineEdit_type->setCurrentIndex(0);
+    ui->lineEdit_Adresse->clear();
+    ui->spinBox_budget->setValue(0);
+
+}
+
 
 void MainWindow::on_pb_ajouter_clicked()
 {
@@ -55,7 +83,8 @@ void MainWindow::on_pb_ajouter_clicked()
     { QMessageBox::information(nullptr, QObject::tr("OK"),
                             QObject::tr("Ajout effectué.\n"
                                         "Click Cancel to exit."), QMessageBox::Cancel);
-        ui->tab_batiment->setModel(b.afficher());
+        show_table();
+        clear_form();
 
         }
             else
@@ -72,7 +101,8 @@ void MainWindow::on_pb_supprimer_clicked()
     { QMessageBox::information(nullptr, QObject::tr("OK"),
                             QObject::tr("Suppression effectué.\n"
                                         "Click Cancel to exit."), QMessageBox::Cancel);
-        ui->tab_batiment->setModel(b.afficher());
+        show_table();
+        clear_form();
 
         }
             else
@@ -102,7 +132,8 @@ if(ok)
     QMessageBox::information(nullptr, QObject::tr("succes"),
                 QObject::tr(" modifié.\n"
                             "Click Cancel to exit."), QMessageBox::Cancel);
-    ui->tab_batiment->setModel(b.afficher());
+    show_table();
+    clear_form();
 
 
 }
@@ -204,6 +235,21 @@ void MainWindow::on_lineEdit_2_textChanged(const QString &arg1)
 
 void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
 {
-    sel_col=ui->comboBox->currentIndex()-1;
+    sel_col=ui->comboBox->currentIndex();
     proxy->setFilterKeyColumn(sel_col); // chercher dans tout le tableau (-1) ou donner le numero de la colone
+}
+
+void MainWindow::on_tab_batiment_clicked(const QModelIndex &index)
+{
+    selected=ui->tab_batiment->model()->data(index).toString();
+}
+
+void MainWindow::on_tab_batiment_doubleClicked(const QModelIndex &index)
+{
+    fill_form(selected);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    clear_form();
 }

@@ -589,7 +589,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <property name="geometry">
         <rect>
          <x>360</x>
-         <y>90</y>
+         <y>40</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -602,7 +602,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <property name="geometry">
         <rect>
          <x>360</x>
-         <y>220</y>
+         <y>140</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -615,7 +615,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <property name="geometry">
         <rect>
          <x>360</x>
-         <y>160</y>
+         <y>90</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -698,6 +698,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         </property>
        </item>
       </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>200</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QTableView" name="tab_batiment">
       <property name="geometry">
@@ -750,11 +763,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </item>
        <item>
         <property name="text">
-         <string>Budget</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
          <string>Responsable</string>
         </property>
        </item>
@@ -766,6 +774,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <item>
         <property name="text">
          <string>Adresse</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Budget</string>
         </property>
        </item>
       </widget>

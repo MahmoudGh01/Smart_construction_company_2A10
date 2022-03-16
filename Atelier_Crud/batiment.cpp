@@ -48,7 +48,7 @@ QSqlQueryModel* Batiments::afficher()
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("Responsable"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("Type"));
           model->setHeaderData(3, Qt::Horizontal, QObject::tr("Adresse"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("budget"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("Budget"));
           return model;
 }
 
