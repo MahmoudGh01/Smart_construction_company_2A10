@@ -253,3 +253,21 @@ void MainWindow::on_pushButton_2_clicked()
 {
     clear_form();
 }
+
+void MainWindow::on_commandLinkButton_clicked()
+{
+    s = new stat_combo();
+
+  s->setWindowTitle("statistique salaire");
+  s->choix_pie();
+  s->show();
+}
+
+void MainWindow::on_commandLinkButton_2_clicked()
+{
+    s = new stat_combo();
+
+  s->setWindowTitle("statistique type");
+  s->choix_bar();
+  s->show();
+}

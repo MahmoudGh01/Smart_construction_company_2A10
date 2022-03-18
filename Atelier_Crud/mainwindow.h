@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "batiment.h"
+#include "stat_combo.h"
 
 
 #include <QMainWindow>
@@ -51,11 +52,18 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+
+
+    void on_commandLinkButton_clicked();
+
+    void on_commandLinkButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     Batiments b;
     int sel_col=-1;
     QString selected="";
+    stat_combo *s;
 };
 
 #endif // MAINWINDOW_H

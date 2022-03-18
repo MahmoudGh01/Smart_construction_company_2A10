@@ -3,7 +3,8 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
-
+CONFIG += c++11
+QT += charts
 QT       += core gui sql
 QT+=sql
 QT  += printsupport
@@ -31,16 +32,19 @@ SOURCES += \
     exportexcelobject.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    stat_combo.cpp
 
 HEADERS += \
     batiment.h \
     exportexcelobject.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    stat_combo.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        stat_combo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
