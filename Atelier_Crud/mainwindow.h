@@ -58,6 +58,8 @@ private slots:
 
     void on_commandLinkButton_2_clicked();
 
+    void on_pushButton_PDF_clicked();
+
 private:
     Ui::MainWindow *ui;
     Batiments b;

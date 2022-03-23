@@ -3,6 +3,15 @@
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QObject>
+#include <QString>
+#include "QDebug"
+#include <QPrinter>
+#include <QFileDialog>
+#include <QTextDocument>
+
+#include <QSqlQueryModel>
+#include <QDate>
+
 Batiments::Batiments()
 {
 id="";
@@ -72,4 +81,29 @@ bool Batiments::modifier()
     query.bindValue(":adresse", adresse);
     query.bindValue(":budget", budget);
     return query.exec();
+}
+void Batiments::creerpdf()
+{
+    QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Export PDF", QString(), "*.pdf");
+    if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+    QPrinter printer(QPrinter::PrinterResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setPaperSize(QPrinter::A4);
+    printer.setOutputFileName(fileName);
+
+    QTextDocument doc;
+    QSqlQuery q;
+    q.prepare("SELECT * FROM Batiment ");
+    q.exec();
+    QString pdf="<br> <h1 style='text-align: center;'><span style='color: #ffcc00;'><em><strong>TABLEAU DE BATIMENTS</strong></em></span></p></h1>\n <table style=' width: '100%'; margin-left: auto; margin-right: auto; border='0'>  <tr>  <th>ID </th>       <th>Responsable </th>  <th>Type </th> <th>adresse </th>  <th>Budget </th>   " ;
+
+
+    while ( q.next()) {
+pdf= pdf+ " <br> <tr> <td><p>"+ q.value(0).toString()+"</p></td>   <td><p> " + q.value(1).toString() +"</p></td>   <td><p>" +q.value(2).toString() +" </p></td>   <td><p>"+q.value(3).toString()+"</p></td> <td><p>"+q.value(4).toString()+"</p></td>";
+
+    }
+    doc.setHtml(pdf);
+    doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+    doc.print(&printer);
 }

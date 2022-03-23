@@ -271,3 +271,9 @@ void MainWindow::on_commandLinkButton_2_clicked()
   s->choix_bar();
   s->show();
 }
+
+void MainWindow::on_pushButton_PDF_clicked()
+{
+    Batiments p;
+    p.creerpdf();
+}

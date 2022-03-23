@@ -1,7 +1,9 @@
 #ifndef BATIMENT_H
 #define BATIMENT_H
 #include<QString>
-#include<QSqlQueryModel>
+
+#include <QSqlQueryModel>
+#include <QDate>
 
 
 
@@ -29,7 +31,7 @@ public:
 
     QString get_budget();
 
-
+    void creerpdf();
 
 
 private:
