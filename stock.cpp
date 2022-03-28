@@ -58,4 +58,3 @@ bool Stock::modifier(int id,QString nom_produit, int prix )
 
     return query.exec();
 }
-

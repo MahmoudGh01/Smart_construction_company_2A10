@@ -1,18 +1,18 @@
-#ifndef STOCK_H
-#define STOCK_H
+#ifndef STOCKP_H
+#define STOCKP_H
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
 
 
-class Stock
+class Stockp
 {
      QString nom_produit ;
     int id, prix;
 public:
     //constructeurs
-    Stock(){}
-    Stock(int,int,QString);
+    Stockp(){}
+    Stockp(int,int,QString);
 
     //Getters
     int getid(){return id;}
@@ -29,7 +29,7 @@ public:
     QSqlQueryModel * afficher();
     bool supprimer(int);
     bool modifier(int id1,QString nom1, int prix1 ) ;
-
+    void creerpdf();
 
 
 
@@ -38,4 +38,4 @@ public:
 
 };
 
-#endif // STOCK_H
+#endif // STOCKP_H

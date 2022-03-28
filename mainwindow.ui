@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -45,47 +45,47 @@
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>210</x>
-         <y>40</y>
+         <x>80</x>
+         <y>90</y>
          <width>171</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;Nom_produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;Nom_produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>110</y>
+         <x>80</x>
+         <y>140</y>
          <width>171</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>190</y>
+         <x>80</x>
+         <y>200</y>
          <width>171</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
         <rect>
          <x>460</x>
-         <y>260</y>
+         <y>140</y>
          <width>141</width>
          <height>41</height>
         </rect>
@@ -97,8 +97,8 @@
       <widget class="QLineEdit" name="lineEdit">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>40</y>
+         <x>280</x>
+         <y>90</y>
          <width>141</width>
          <height>31</height>
         </rect>
@@ -107,8 +107,8 @@
       <widget class="QLineEdit" name="lineEdit_2">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>110</y>
+         <x>280</x>
+         <y>140</y>
          <width>141</width>
          <height>31</height>
         </rect>
@@ -117,40 +117,13 @@
       <widget class="QLineEdit" name="lineEdit_3">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>190</y>
+         <x>280</x>
+         <y>200</y>
          <width>141</width>
          <height>31</height>
         </rect>
        </property>
       </widget>
-      <widget class="QLabel" name="label_13">
-       <property name="geometry">
-        <rect>
-         <x>-10</x>
-         <y>-40</y>
-         <width>661</width>
-         <height>391</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../bg de construction – Recherche Google_files/54919363-gestionnaire-homme-builder-et-travailleur-sur-la-constructions-de-bâtiments-de-fond-construction-et-.jpg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <zorder>label_13</zorder>
-      <zorder>label</zorder>
-      <zorder>label_2</zorder>
-      <zorder>label_3</zorder>
-      <zorder>pushButton_2</zorder>
-      <zorder>lineEdit</zorder>
-      <zorder>lineEdit_2</zorder>
-      <zorder>lineEdit_3</zorder>
      </widget>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
@@ -178,10 +151,10 @@
      <widget class="QTableView" name="tableView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>11</y>
-        <width>731</width>
-        <height>321</height>
+        <x>20</x>
+        <y>160</y>
+        <width>391</width>
+        <height>221</height>
        </rect>
       </property>
      </widget>
@@ -201,28 +174,135 @@
        <pixmap>../../../../bandes-seules-occultant-beige-clair-3515.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QLabel" name="label_16">
+     <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>631</width>
-        <height>321</height>
+        <x>50</x>
+        <y>9</y>
+        <width>541</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_rech">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>11</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Choisir</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Choisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Identifiant</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Prix</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Nom du produit</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>70</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Statistique</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_Imprimer">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>70</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_PDF">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>70</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="qr_code">
+      <property name="geometry">
+       <rect>
+        <x>445</x>
+        <y>175</y>
+        <width>191</width>
+        <height>201</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
-      <property name="pixmap">
-       <pixmap>../../77777777777777.jpg</pixmap>
+     </widget>
+     <widget class="QPushButton" name="qrCode">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>140</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
       </property>
-      <property name="scaledContents">
-       <bool>true</bool>
+      <property name="text">
+       <string>qrCode</string>
       </property>
      </widget>
-     <zorder>tableView</zorder>
-     <zorder>label_16</zorder>
      <zorder>label_11</zorder>
+     <zorder>tableView</zorder>
+     <zorder>groupBox_2</zorder>
+     <zorder>qr_code</zorder>
+     <zorder>qrCode</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -231,21 +311,21 @@
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>140</y>
+        <x>176</x>
+        <y>170</y>
         <width>71</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_4">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>140</y>
+        <x>290</x>
+        <y>160</y>
         <width>141</width>
         <height>41</height>
        </rect>
@@ -254,8 +334,8 @@
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>490</x>
-        <y>230</y>
+        <x>470</x>
+        <y>160</y>
         <width>111</width>
         <height>41</height>
        </rect>
@@ -267,8 +347,8 @@
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
+        <x>-10</x>
+        <y>-30</y>
         <width>901</width>
         <height>521</height>
        </rect>
@@ -280,26 +360,6 @@
        <pixmap>../../../../bandes-seules-occultant-beige-clair-3515.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>631</width>
-        <height>371</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../bg de construction – Recherche Google_files/54919363-gestionnaire-homme-builder-et-travailleur-sur-la-constructions-de-bâtiments-de-fond-construction-et-.jpg</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <zorder>label_14</zorder>
      <zorder>label_7</zorder>
      <zorder>label_4</zorder>
      <zorder>lineEdit_4</zorder>
@@ -312,8 +372,8 @@
      <widget class="QLineEdit" name="id_modif">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>150</y>
+        <x>280</x>
+        <y>160</y>
         <width>151</width>
         <height>31</height>
        </rect>
@@ -325,8 +385,8 @@
      <widget class="QPushButton" name="modif_button">
       <property name="geometry">
        <rect>
-        <x>490</x>
-        <y>280</y>
+        <x>470</x>
+        <y>160</y>
         <width>111</width>
         <height>41</height>
        </rect>
@@ -338,8 +398,8 @@
      <widget class="QLineEdit" name="nom_modif">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>70</y>
+        <x>280</x>
+        <y>99</y>
         <width>151</width>
         <height>31</height>
        </rect>
@@ -351,7 +411,7 @@
      <widget class="QLineEdit" name="prix_modif">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>280</x>
         <y>220</y>
         <width>151</width>
         <height>31</height>
@@ -364,40 +424,40 @@
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>220</y>
+        <x>80</x>
+        <y>210</y>
         <width>171</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>70</y>
+        <x>80</x>
+        <y>100</y>
         <width>171</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;Nom_produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;Nom_produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>80</x>
         <y>150</y>
         <width>171</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#aa00ff;&quot;&gt;id&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_6">
@@ -416,26 +476,6 @@
        <pixmap>../../../../bandes-seules-occultant-beige-clair-3515.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QLabel" name="label_15">
-      <property name="geometry">
-       <rect>
-        <x>6</x>
-        <y>0</y>
-        <width>621</width>
-        <height>371</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../bg de construction – Recherche Google_files/54919363-gestionnaire-homme-builder-et-travailleur-sur-la-constructions-de-bâtiments-de-fond-construction-et-.jpg</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <zorder>label_15</zorder>
      <zorder>label_6</zorder>
      <zorder>id_modif</zorder>
      <zorder>modif_button</zorder>
@@ -471,7 +511,7 @@
      <x>0</x>
      <y>0</y>
      <width>679</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

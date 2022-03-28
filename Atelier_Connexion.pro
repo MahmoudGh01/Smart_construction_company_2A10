@@ -4,7 +4,11 @@
 #
 #-------------------------------------------------
 
+CONFIG += c++11
+QT += charts
 QT       += core gui sql
+QT+=sql
+QT  += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,15 +32,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    stock.cpp
+    qrcode.cpp \
+    stat_combo.cpp \
+    stockp.cpp
 
 HEADERS += \
         mainwindow.h \
     connection.h \
-    stock.h
+    qrcode.h \
+    stat_combo.h \
+    stockp.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        stat_combo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
