@@ -659,7 +659,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <x>132</x>
          <y>110</y>
          <width>171</width>
-         <height>22</height>
+         <height>31</height>
         </rect>
        </property>
        <item>
@@ -1028,6 +1028,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         </disabled>
        </palette>
       </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_4">
       <property name="geometry">
@@ -1159,25 +1162,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <rect>
          <x>60</x>
          <y>30</y>
-         <width>81</width>
+         <width>181</width>
          <height>41</height>
         </rect>
        </property>
        <property name="text">
-        <string>STAT</string>
-       </property>
-      </widget>
-      <widget class="QCommandLinkButton" name="commandLinkButton_2">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>30</y>
-         <width>91</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>STAT</string>
+        <string>STATISTIQUE SALAIRE</string>
        </property>
       </widget>
      </widget>
