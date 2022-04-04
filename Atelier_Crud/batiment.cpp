@@ -96,7 +96,7 @@ void Batiments::creerpdf()
     QSqlQuery q;
     q.prepare("SELECT * FROM Batiment ");
     q.exec();
-    QString pdf="<br> <h1 style='text-align: center;'><span style='color: #ffcc00;'><em><strong>TABLEAU DE BATIMENTS</strong></em></span></p></h1>\n <table style=' width: '100%'; margin-left: auto; margin-right: auto; border='0'>  <tr>  <th>ID </th>       <th>Responsable </th>  <th>Type </th> <th>adresse </th>  <th>Budget </th>   " ;
+    QString pdf="<br> <h1 style='text-align: center;'><span style='color: #ffcc00;'><em><strong>TABLEAU DE BATIMENTS</strong></em></span></p></h1>\n <table style=\"text-align: center; font-size: 20px;\" border=1>  <tr>  <th>ID </th>       <th>Responsable </th>  <th>Type </th> <th>adresse </th>  <th>Budget </th>   " ;
 
 
     while ( q.next()) {
