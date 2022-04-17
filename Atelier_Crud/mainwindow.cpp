@@ -7,10 +7,10 @@
 #include<QTextDocument>
 #include<QDebug>
 #include<QPrinter>
-#include <QPrinter>
+
 #include <QtPrintSupport/QPrinter>
 #include <QPrintDialog>
-#include<QPrintDialog>
+
 #include <QDate>
 #include <QSqlQuery>
 MainWindow::MainWindow(QWidget *parent) :
@@ -189,7 +189,7 @@ void MainWindow::on_pushButton_3_clicked()
                              << "<title>ERP - COMmANDE LIST<title>\n "
                              << "</head>\n"
                              "<body bgcolor=#ffffff link=#5000A0>\n"
-                             "<h1 style=\"text-align: center;\"><strong> ******LISTE DES  BATIMENTS ******"+TT+" </strong></h1>"
+                             "<h1 style=\"text-align: center;\"><strong> ******LISTE DES  BATIMENTS ******\n"+TT+" </strong></h1>"
                              "<table style=\"text-align: center; font-size: 20px;\" border=1>\n "
                                "</br> </br>";
                          // headers
@@ -227,7 +227,7 @@ void MainWindow::on_pushButton_3_clicked()
                          delete document;
 
 }
-
+//rechercher
 void MainWindow::on_lineEdit_2_textChanged(const QString &arg1)
 {
     proxy->setFilterFixedString(arg1);
@@ -238,7 +238,7 @@ void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
     sel_col=ui->comboBox->currentIndex();
     proxy->setFilterKeyColumn(sel_col); // chercher dans tout le tableau (-1) ou donner le numero de la colone
 }
-
+//selection
 void MainWindow::on_tab_batiment_clicked(const QModelIndex &index)
 {
     selected=ui->tab_batiment->model()->data(index).toString();
