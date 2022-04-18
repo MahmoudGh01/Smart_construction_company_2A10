@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "batiment.h"
 #include "stat_combo.h"
+#include "arduino.h"
 
 
 #include <QMainWindow>
@@ -59,13 +60,20 @@ private slots:
     void on_commandLinkButton_2_clicked();
 
     void on_pushButton_PDF_clicked();
+    void update_label();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;
     Batiments b;
     int sel_col=-1;
     QString selected="";
+    QByteArray data;
     stat_combo *s;
+    int alert=0;
+
+    Arduino A;
 };
 
 #endif // MAINWINDOW_H

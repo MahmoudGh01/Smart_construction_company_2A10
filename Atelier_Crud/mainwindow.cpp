@@ -21,6 +21,65 @@ MainWindow::MainWindow(QWidget *parent) :
 
 //ui->tab_batiment->setModel(b.afficher());
 show_table();
+int ret=A.connect_arduino();
+      switch(ret){
+      case(0):qDebug()<< "arduino is availble and connected to :"<< A.getarduino_port_name();
+          break;
+      case(1):qDebug()<< "arduino is availble but not connected to :"<< A.getarduino_port_name();
+          break;
+      case(-1):qDebug()<< "arduino is not availble";
+      }
+      QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
+}
+
+void MainWindow::update_label()
+{
+data=A.read_from_arduino();
+QString DataAsString = QString(data);
+
+qDebug()<< DataAsString;
+int ret;
+
+
+if(data=="1"){
+
+    ui->label_arduino->setText("mouvement detecte");
+
+    if(alert==0)
+    {
+         alert=1;
+         ret = QMessageBox::critical(this, tr("mouvement detecte."),
+                                        tr("Voulez-vous fermer l'alarme?"),
+                                        QMessageBox::Yes | QMessageBox::Cancel,
+                                        QMessageBox::Yes);
+         switch (ret) {
+           case QMessageBox::Yes:
+
+             A.write_to_arduino("3");
+               alert=0;
+               break;
+           case QMessageBox::Cancel:
+               // Cancel was clicked
+             alert=0;
+               break;
+           default:
+               // should never be reached
+               break;
+         }
+    }
+
+
+
+
+}else if (data=="2"){
+    ui->label_arduino->setText("pas de mouvement detecte");
+}
+
+
+
+
+
 
 }
 
@@ -276,4 +335,11 @@ void MainWindow::on_pushButton_PDF_clicked()
 {
     Batiments p;
     p.creerpdf();
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+
+      A.write_to_arduino("3");
+      qDebug() << "3";
 }

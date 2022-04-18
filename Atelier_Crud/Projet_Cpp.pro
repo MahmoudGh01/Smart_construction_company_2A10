@@ -8,6 +8,8 @@ QT += charts
 QT       += core gui sql
 QT+=sql
 QT  += printsupport
+QT       += core gui sql network charts multimedia multimediawidgets serialport
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,6 +30,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    arduino.cpp \
     batiment.cpp \
     exportexcelobject.cpp \
         main.cpp \
@@ -36,6 +39,7 @@ SOURCES += \
     stat_combo.cpp
 
 HEADERS += \
+    arduino.h \
     batiment.h \
     exportexcelobject.h \
         mainwindow.h \
