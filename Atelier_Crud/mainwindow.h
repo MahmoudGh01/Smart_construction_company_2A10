@@ -69,8 +69,9 @@ private:
     Batiments b;
     int sel_col=-1;
     QString selected="";
-    QByteArray data;
     stat_combo *s;
+    QByteArray data;
+
     int alert=0;
 
     Arduino A;

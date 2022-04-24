@@ -9,7 +9,7 @@ QT       += core gui sql
 QT+=sql
 QT  += printsupport
 QT       += core gui sql network charts multimedia multimediawidgets serialport
-
+QT += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

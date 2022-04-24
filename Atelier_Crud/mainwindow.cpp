@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-//ui->tab_batiment->setModel(b.afficher());
+
 show_table();
 int ret=A.connect_arduino();
       switch(ret){
@@ -75,12 +75,6 @@ if(data=="1"){
 }else if (data=="2"){
     ui->label_arduino->setText("pas de mouvement detecte");
 }
-
-
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -312,7 +306,7 @@ void MainWindow::on_pushButton_2_clicked()
 {
     clear_form();
 }
-
+//
 void MainWindow::on_commandLinkButton_clicked()
 {
     s = new stat_combo();
